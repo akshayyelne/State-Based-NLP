@@ -1,0 +1,151 @@
+[
+    {
+        "tag": "greeting",
+        "patterns": [
+            "Hi",
+            "Hello",
+            "Good morning",
+            "Good afternoon",
+            "Hey"
+        ],
+        "responses": [
+            "Hello! I’m your Insurance Assistant. How can I help you today?",
+            "Hi there! Would you like to file a claim, check a claim status, or create a new policy?"
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": [
+            "Bye",
+            "Goodbye",
+            "See you",
+            "That’s all",
+            "Exit"
+        ],
+        "responses": [
+            "Thank you for contacting us. Have a great day!",
+            "Goodbye! Feel free to return anytime."
+        ]
+    },
+    {
+        "tag": "help",
+        "patterns": [
+            "I need help",
+            "What can you help me with",
+            "How does this work",
+            "What can you do"
+        ],
+        "responses": [
+            "I can help you file a claim, check claim status, or create a new insurance policy.",
+            "You can say things like 'File a claim', 'Check claim status', or 'Create new policy'."
+        ]
+    },
+    {
+        "tag": "file_claim",
+        "patterns": [
+            "I want to file a claim",
+            "Report an accident",
+            "Submit a claim",
+            "My car was damaged",
+            "Start a new claim"
+        ],
+        "responses": [
+            "Sure, I will help you file a claim.",
+            "Let’s begin your claim process."
+        ]
+    },
+    {
+        "tag": "check_claim_status",
+        "patterns": [
+            "Check my claim status",
+            "Track my claim",
+            "Has my claim been approved",
+            "Claim update"
+        ],
+        "responses": [
+            "I can check that for you.",
+            "Let me help you check your claim status."
+        ]
+    },
+    {
+        "tag": "create_policy",
+        "patterns": [
+            "Create a new policy",
+            "Buy insurance",
+            "I need a new policy",
+            "Open a policy",
+            "Get insurance coverage"
+        ],
+        "responses": [
+            "I can help you create a new policy.",
+            "Let’s begin creating your insurance policy."
+        ]
+    },
+    {
+        "tag": "cancel_process",
+        "patterns": [
+            "Cancel",
+            "Stop",
+            "Abort",
+            "Never mind",
+            "Start over"
+        ],
+        "responses": [
+            "Okay, I have cancelled the current process.",
+            "Process stopped. Let me know how else I can assist."
+        ]
+    },
+    {
+        "tag": "thanks",
+        "patterns": [
+            "Thank you",
+            "Thanks",
+            "Appreciate it"
+        ],
+        "responses": [
+            "You're welcome!",
+            "Happy to help!"
+        ]
+    },
+    {
+        "tag": "renew_policy",
+        "patterns": [
+            "renew my policy",
+            "policy renewal",
+            "extend policy"
+        ],
+        "responses": []
+    },
+    {
+        "tag": "check_policy_status",
+        "patterns": [
+            "check my policy status",
+            "what is my policy status",
+            "is my policy active",
+            "policy status",
+            "look up my policy"
+        ],
+        "responses": []
+    },
+    {
+        "tag": "activate_policy",
+        "patterns": [
+            "activate policy",
+            "enable policy",
+            "turn on policy",
+            "make policy active"
+        ],
+        "responses": []
+    },
+    {
+        "tag": "deactivate_policy",
+        "patterns": [
+            "deactivate policy",
+            "disable policy",
+            "turn off policy",
+            "make policy inactive",
+            "stop policy"
+        ],
+        "responses": []
+    }
+]
