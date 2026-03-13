@@ -20,7 +20,7 @@ DATA_DIR = os.path.join(BASE_DIR, "data")
 # ======================================
 DB_PATH = os.getenv(
     "DB_PATH",
-    os.path.join(DATA_DIR, "insurance.db")
+    "/tmp/insurance.db"
 )
 
 # ======================================
