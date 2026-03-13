@@ -4,15 +4,15 @@
      
      The system simulates real-world insurance operations including:
      
-     Policy creation
+     1. Policy creation
      
-     Claim submission
+     2. Claim submission
      
-     Claim status tracking
+     3. Claim status tracking
      
-     Policy renewal
+     4. Policy renewal
      
-     Admin monitoring
+     5. Admin monitoring
      
      The solution combines Machine Learning intent classification, rule-based entity extraction, and structured workflow automation to guide users through complex insurance processes.
 
@@ -31,33 +31,33 @@
      
      Steps include:
      
-     Customer identity capture
+    1.  Customer identity capture
      
-     Date of birth validation
+    2. Date of birth validation
      
-     Vehicle information collection
+    3. Vehicle information collection
      
-     Coverage selection
+    4. Coverage selection
      
-     Premium calculation
+    5. Premium calculation
      
-     Policy issuance
+    6.  Policy issuance
      
-     Claim Management Workflow
+    7. Claim Management Workflow
      
-     Customers can submit insurance claims through the chatbot.
+    8. Customers can submit insurance claims through the chatbot.
      
-     The system performs:
+    9.  The system performs:
      
-     Policy validation
+    10. Policy validation
      
-     Incident data collection
+    11.  Incident data collection
      
-     Risk classification
+    12.  Risk classification
      
-     Claim submission
+    13.   Claim submission
      
-     Claim lifecycle simulation:
+    14. Claim lifecycle simulation:
      
      <img width="561" height="199" alt="image" src="https://github.com/user-attachments/assets/874f2ef9-0754-497c-adbc-0a5c07a30ebe" />
 
