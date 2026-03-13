@@ -1,24 +1,37 @@
 import streamlit as st
 import traceback
 
-st.title("Debug Startup")
+st.title("Streamlit Startup Debug")
 
 try:
+    st.write("Step 1: basic imports")
+
     import os
     import sys
     import sqlite3
     import pandas as pd
 
-    st.write("Basic imports successful")
+    st.write("Step 2: path setup")
+
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    if current_dir not in sys.path:
+        sys.path.append(current_dir)
+
+    st.write("Step 3: importing config")
+
+    from config import DB_PATH
+    st.write(f"DB_PATH = {DB_PATH}")
+
+    st.write("Step 4: importing dialogue manager")
 
     from dialogue.dialogue_manager import DialogueManager
-    st.write("DialogueManager imported")
+
+    st.write("Step 5: creating dialogue manager")
 
     dm = DialogueManager()
-    st.write("DialogueManager initialized")
 
-    st.success("Application loaded successfully")
+    st.success("App loaded successfully!")
 
 except Exception:
-    st.error("Application crashed")
+    st.error("Startup failure")
     st.text(traceback.format_exc())
