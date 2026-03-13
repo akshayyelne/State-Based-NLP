@@ -1,4 +1,4 @@
-**Insurance Policy & Claims Assistant (NLP + FSM)**********
+**Insurance Policy & Claims Assistant (NLP + FSM)**
 
 An AI-powered conversational insurance assistant built using Natural Language Processing (NLP) and Finite State Machine (FSM) workflow orchestration.
 
