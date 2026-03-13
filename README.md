@@ -166,10 +166,4 @@ Running the Project
      
      It is designed as a learning project for AI, NLP, and workflow-based system design.
      
-     If you'd like, I can also help you create:
      
-     A GitHub portfolio-level README (much more impressive visually)
-     
-     Architecture diagrams for the repo
-     
-     Badges + project highlights to make recruiters notice it.
