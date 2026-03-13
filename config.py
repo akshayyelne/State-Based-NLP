@@ -11,11 +11,16 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ENVIRONMENT = os.getenv("APP_ENV", "development")
 
 # ======================================
+# DATA DIRECTORY
+# ======================================
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+# ======================================
 # DATABASE CONFIGURATION
 # ======================================
 DB_PATH = os.getenv(
     "DB_PATH",
-    os.path.join(BASE_DIR, "insurance.db")
+    os.path.join(DATA_DIR, "insurance.db")
 )
 
 # ======================================
@@ -28,7 +33,7 @@ CHAT_LOG_PATH = os.path.join(BASE_DIR, "chat_log.csv")
 # ======================================
 INTENTS_PATH = os.getenv(
     "INTENTS_PATH",
-    os.path.join(BASE_DIR, "intents.json")
+    os.path.join(DATA_DIR, "intents.json")
 )
 
 # ======================================
