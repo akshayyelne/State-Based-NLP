@@ -4,32 +4,54 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from config import INTENTS_PATH
 
+# ======================================
+
+# LOAD & TRAIN INTENT MODEL (CACHED)
+
+# ======================================
 
 @st.cache_resource
 def load_model():
+"""
+Loads intents from JSON, trains the TF-IDF + Logistic Regression model,
+and caches it for reuse across Streamlit sessions.
+"""
 
-    with open(INTENTS_PATH) as file:
-        intents = json.load(file)
+```
+with open(INTENTS_PATH, "r") as file:
+    intents = json.load(file)
 
-    vectorizer = TfidfVectorizer()
-    clf = LogisticRegression(max_iter=1000)
+patterns = []
+tags = []
 
-    tags = []
-    patterns = []
+for intent in intents:
+    for pattern in intent["patterns"]:
+        patterns.append(pattern.lower())
+        tags.append(intent["tag"])
 
-    for intent in intents:
-        for pattern in intent["patterns"]:
-            patterns.append(pattern.lower())
-            tags.append(intent["tag"])
+vectorizer = TfidfVectorizer()
+clf = LogisticRegression(max_iter=1000)
 
-    x = vectorizer.fit_transform(patterns)
-    clf.fit(x, tags)
+x = vectorizer.fit_transform(patterns)
+clf.fit(x, tags)
 
-    return vectorizer, clf
+return vectorizer, clf
+```
 
+# ======================================
 
-vectorizer, clf = load_model()
+# INTENT PREDICTION
 
+# ======================================
 
 def predict_intent(text):
-    return clf.predict(vectorizer.transform([text.lower()]))[0]
+"""
+Predicts the intent tag for user input.
+"""
+
+```
+vectorizer, clf = load_model()
+prediction = clf.predict(vectorizer.transform([text.lower()]))
+
+return prediction[0]
+```
