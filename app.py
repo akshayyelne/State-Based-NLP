@@ -275,10 +275,15 @@ elif choice == "About":
 ```
 
 # ======================================
-
-# ENTRY POINT
-
+# SAFE APP EXECUTION
 # ======================================
 
-if **name** == "**main**":
-main()
+def run_app():
+    main()
+
+try:
+    run_app()
+except Exception:
+    st.title("Application Error")
+    st.text(traceback.format_exc())
+
