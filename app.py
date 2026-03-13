@@ -1,41 +1,34 @@
-import os
-import sqlite3
-import pandas as pd
 import streamlit as st
-import sys
 import traceback
 
-# ======================================
-
-# SAFE IMPORT HANDLING
-
-# ======================================
-
 try:
-current_dir = os.path.dirname(os.path.abspath(**file**))
-if current_dir not in sys.path:
-sys.path.append(current_dir)
+    import os
+    import sqlite3
+    import pandas as pd
+    import sys
 
-```
-from dialogue.dialogue_manager import DialogueManager
-from config import DB_PATH, BASE_DIR, ADMIN_PASSWORD
-```
+    # PATH SETUP
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    if current_dir not in sys.path:
+        sys.path.append(current_dir)
+
+    from dialogue.dialogue_manager import DialogueManager
+    from config import DB_PATH, BASE_DIR, ADMIN_PASSWORD
 
 except Exception:
-st.error("Startup error detected")
-st.text(traceback.format_exc())
-st.stop()
+    st.title("Startup Error")
+    st.text(traceback.format_exc())
+    st.stop()
+
 
 # ======================================
-
 # CACHE HEAVY OBJECTS
-
 # ======================================
 
 @st.cache_resource
 def get_dialogue_manager():
-return DialogueManager()
-
+    return DialogueManager()
+    
 # ======================================
 
 # DATABASE INITIALIZATION
